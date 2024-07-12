@@ -1,0 +1,43 @@
+// Furniture Products Listings...
+export const furnitureListings = [
+  {
+    id: 'furnit1',
+    img1: '/listings/furniture/listing-furnit1.avif',
+    img2: '/listings/furniture/listing-h-furnit1.avif',
+    prodName: 'EKENÄSET',
+    prodInfo: '2-seat sofa, Kilanda light beige',
+    price: 24990,
+    prevPrice: 37786,
+    rating: 4.5,
+    ratings: 9,
+    tags: [
+      'Furniture',
+      'Sofa',
+      'Living Room',
+      'Living',
+      'sofa',
+      'sofas',
+      '2 seat sofa',
+    ],
+  },
+  {
+    id: 'furnit2',
+    img1: '/listings/furniture/listing-furnit2.avif',
+    img2: '/listings/furniture/listing-h-furnit2.avif',
+    prodName: 'PELLO',
+    prodInfo: 'Armchair, Holmby natural',
+    price: 5490,
+    prevPrice: 7896,
+    rating: 4.5,
+    ratings: 66,
+    tags: [
+      'Furniture',
+      'chair',
+      'Living Room',
+      'Living',
+      'ber room',
+      'armchair',
+      'seat',
+    ],
+  },
+];

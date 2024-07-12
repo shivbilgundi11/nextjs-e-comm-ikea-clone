@@ -1,0 +1,43 @@
+// Storage & Organisation Products Listings...
+export const storageAndOrganisationListings = [
+  {
+    id: 'st&org1',
+    img1: '/listings/st&org/listing-st&org1.avif',
+    img2: '/listings/st&org/listing-h-st&org1.avif',
+    prodName: 'BAGGEBO',
+    prodInfo: 'Cabinet with door, white',
+    price: 2290,
+    prevPrice: 3206,
+    rating: 4.5,
+    ratings: 57,
+    tags: [
+      'Containers',
+      'Boxes',
+      'Living Room',
+      'Bed Room',
+      'Cabinet',
+      'Storage',
+      'Organisers',
+    ],
+  },
+  {
+    id: 'st&org2',
+    img1: '/listings/st&org/listing-st&org2.avif',
+    img2: '/listings/st&org/listing-h-st&org2.avif',
+    prodName: 'FJÄLLBO',
+    prodInfo: 'Shelving unit, black',
+    price: 9990,
+    prevPrice: 13986,
+    rating: 4.5,
+    ratings: 57,
+    tags: [
+      'Storage',
+      'Shelv',
+      'Shelve',
+      'Shelving Unit',
+      'Unit',
+      'Bedroom',
+      'Living Room',
+    ],
+  },
+];
