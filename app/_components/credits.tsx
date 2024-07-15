@@ -10,9 +10,9 @@ export default function CreditsAd() {
   return (
     <>
       <div
-        className={`${showCredit ? 'flex' : 'hidden'} relative h-auto w-full items-center justify-center bg-black p-2 text-white md:p-3`}
+        className={`${showCredit ? 'flex' : 'hidden'} relative h-12 w-full items-center justify-center bg-black p-2 text-white md:p-3`}
       >
-        <p className='text-xs tracking-wide md:text-sm'>
+        <p className='text-[12px] tracking-wide'>
           All products and images sourced from{' '}
           <a
             href='https://www.ikea.com/in/en/'
