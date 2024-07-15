@@ -74,7 +74,7 @@ export default function Footer() {
 
           <Button
             variant={'outline'}
-            className='rounded-full border-2 border-gray-600 bg-transparent p-5 text-sm font-semibold hover:border-black'
+            className='cursor-not-allowed rounded-full border-2 border-gray-400 bg-transparent p-5 text-sm font-semibold hover:border-black'
           >
             <SlGlobe className='mr-3 text-xl' /> Change country
           </Button>
