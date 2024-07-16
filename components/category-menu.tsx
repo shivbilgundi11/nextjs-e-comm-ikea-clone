@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { CgBox } from 'react-icons/cg';
 import { GrHomeRounded } from 'react-icons/gr';
 
+import CategoryContainer from '@/app/_components/categ-cards';
+
 import { Button } from './ui/button';
 
 type Tab = {
@@ -52,8 +54,8 @@ export default function CategoryMenu() {
   const [tabIndex, setTabIndex] = useState(2);
 
   return (
-    <section className='hidden h-14 w-full lg:block'>
-      <div className='container flex h-full w-full items-center border-b lg:pl-0'>
+    <section className='container hidden h-auto w-full lg:block'>
+      <div className='flex h-14 w-max items-center border-b lg:pl-0'>
         {TABS.map((tab) => (
           <TabButton
             key={tab.index}
@@ -63,6 +65,7 @@ export default function CategoryMenu() {
           />
         ))}
       </div>
+      <CategoryContainer tab={tabIndex} />
     </section>
   );
 }
