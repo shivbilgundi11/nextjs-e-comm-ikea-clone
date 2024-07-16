@@ -9,17 +9,17 @@ export default function SearchBox() {
   const [suggestions, setSuggestions] = useState(false);
   return (
     <>
-      <div className='relative z-30 h-auto w-full p-2 md:w-[45vw] md:p-4 lg:w-[28vw]'>
+      <div className='relative z-30 h-auto w-full p-2 md:w-[55vw] md:p-4 lg:w-[36vw]'>
         <input
           type='text'
           name='search-box'
-          className='h-auto w-full rounded-full bg-gray-100 p-3 px-12 outline-blue-500 placeholder:text-base placeholder:text-gray-700 focus-within:bg-white hover:bg-[#dfdfdf]'
+          className='h-auto w-full rounded-full bg-gray-100 p-3 px-14 outline-blue-500 placeholder:text-base placeholder:text-gray-700 focus-within:bg-white hover:bg-[#dfdfdf]'
           placeholder='What are you looking for?'
           onFocus={() => setSuggestions(true)}
           onBlur={() => setSuggestions(false)}
         />
 
-        <GrSearch className='absolute left-7 top-[38%] text-xl font-bold' />
+        <GrSearch className='absolute left-9 top-[38%] text-xl font-bold' />
 
         <div
           className={`${suggestions ? 'flex' : 'hidden'} absolute left-0 top-0 -z-[10] h-auto w-full flex-col items-center justify-center rounded-lg border bg-white p-3 shadow-2xl md:p-5`}

@@ -1,3 +1,4 @@
+import CategoryMenu from '@/components/category-menu';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 
@@ -12,6 +13,7 @@ export default function RootLayout({
   return (
     <>
       <Navbar />
+      <CategoryMenu />
       {children}
       <Footer />
       <BackToTop />

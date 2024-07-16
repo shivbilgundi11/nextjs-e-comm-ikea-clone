@@ -16,7 +16,7 @@ export default function Navbar() {
         <CreditsAd />
         <nav className='container flex min-h-[130px] flex-col items-center justify-evenly border-b md:min-h-[80px] md:flex-row md:justify-between lg:min-h-[90px]'>
           <div className='flex h-full w-full items-center justify-between'>
-            <div className='flex h-full w-max items-center gap-x-8'>
+            <div className='flex h-full w-max items-center gap-x-4'>
               <Link href={'/'}>
                 <Image
                   src={'/assets/ikea-logo.svg'}
@@ -37,8 +37,8 @@ export default function Navbar() {
                   variant={'ghost'}
                   className='rounded-full p-3 font-normal hover:bg-[#dfdfdf]'
                 >
-                  <MdOutlinePersonOutline className='mr-2 text-xl' /> Hej! Log
-                  in
+                  <MdOutlinePersonOutline className='mr-2 text-xl' />{' '}
+                  <p className='hidden lg:inline-block'>Hej! Log in</p>
                 </Button>
               </Link>
 
