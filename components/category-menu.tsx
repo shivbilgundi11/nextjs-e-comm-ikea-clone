@@ -5,6 +5,8 @@ import { CgBox } from 'react-icons/cg';
 import { GrHomeRounded } from 'react-icons/gr';
 
 import CategoryContainer from '@/app/_components/categ-cards';
+import OtherCategories from '@/app/_components/otherCategories';
+import ShopByRoom from '@/app/_components/shop-by-room';
 
 import { Button } from './ui/button';
 
@@ -66,6 +68,8 @@ export default function CategoryMenu() {
         ))}
       </div>
       <CategoryContainer tab={tabIndex} />
+      <ShopByRoom tab={tabIndex} />
+      <OtherCategories tab={tabIndex} />
     </section>
   );
 }

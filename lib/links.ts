@@ -69,7 +69,7 @@ export const categories = [
     id: 'cat-4d5e6f',
     imageURL: '/category/storage-organisation.png',
     category: 'Storage & organisation',
-    path: '/cat/storage-&-organisation',
+    path: '/cat/storage-and-organisation',
   },
   {
     id: 'cat-7g8h9i',
@@ -81,7 +81,7 @@ export const categories = [
     id: 'cat-j0k1l2',
     imageURL: '/category/beds-mattresses.png',
     category: 'Bed & mattresses',
-    path: '/cat/bed-&-mattresses',
+    path: '/cat/bed-and-mattresses',
   },
   {
     id: 'cat-3m4n5o',
@@ -94,5 +94,45 @@ export const categories = [
     imageURL: '/category/lighting.png',
     category: 'Lighting',
     path: '/cat/lighting',
+  },
+];
+
+// Shop by rooms...
+export const shopByRoomList = [
+  {
+    id: 1,
+    roomName: 'Bedroom',
+    path: '/rooms/bedroom/',
+    imageURL: '/rooms/bedroom.avif',
+  },
+  {
+    id: 2,
+    roomName: 'Living Room',
+    path: '/rooms/living-room/',
+    imageURL: '/rooms/livingRoom.avif',
+  },
+  {
+    id: 4,
+    roomName: 'Home Office',
+    path: '/rooms/home-office/',
+    imageURL: '/rooms/homeOffice.avif',
+  },
+  {
+    id: 5,
+    roomName: 'Kitchen',
+    path: '/rooms/kitchen/',
+    imageURL: '/rooms/kitchen.avif',
+  },
+  {
+    id: 7,
+    roomName: 'Dining Room',
+    path: '/rooms/dining-room/',
+    imageURL: '/rooms/diningRoom.avif',
+  },
+  {
+    id: 8,
+    roomName: 'Bathroom',
+    path: '/rooms/bathroom/',
+    imageURL: '/rooms/bathroom.avif',
   },
 ];
