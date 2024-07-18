@@ -13,7 +13,7 @@ export default function SearchBox() {
         <input
           type='text'
           name='search-box'
-          className='h-auto w-full rounded-full bg-gray-100 p-3 px-14 outline-blue-500 placeholder:text-base placeholder:text-gray-700 focus-within:bg-white hover:bg-[#dfdfdf]'
+          className='h-auto w-full rounded-full bg-gray-100 p-3 px-14 outline-blue-500 placeholder:text-base placeholder:text-gray-700 focus-within:bg-white hover:bg-[#dfdfdf] focus:bg-white'
           placeholder='What are you looking for?'
           onFocus={() => setSuggestions(true)}
           onBlur={() => setSuggestions(false)}

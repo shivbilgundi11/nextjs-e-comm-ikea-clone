@@ -2,16 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import Headroom from 'react-headroom';
 import { MdOutlinePersonOutline } from 'react-icons/md';
 import { PiHeartBold } from 'react-icons/pi';
 import { TbShoppingBag } from 'react-icons/tb';
 
 import CreditsAd from '@/app/_components/credits';
+import { MobileNav } from '@/app/_components/mobile-nav';
 
 import SearchBox from './search-box';
 import { Button } from './ui/button';
-
-import Headroom from 'react-headroom';
 
 export default function Navbar() {
   return (
@@ -42,7 +42,7 @@ export default function Navbar() {
                     variant={'ghost'}
                     className='rounded-full p-3 font-normal hover:bg-[#dfdfdf]'
                   >
-                    <MdOutlinePersonOutline className='mr-2 text-xl' />{' '}
+                    <MdOutlinePersonOutline className='text-xl lg:mr-2' />{' '}
                     <p className='hidden lg:inline-block'>Hej! Log in</p>
                   </Button>
                 </Link>
@@ -64,6 +64,7 @@ export default function Navbar() {
                     <TbShoppingBag />
                   </Button>
                 </Link>
+                <MobileNav />
               </div>
             </div>
 

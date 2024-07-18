@@ -53,7 +53,7 @@ const TabButton: React.FC<TabButtonProps> = ({ tab, isActive, onClick }) => (
 );
 
 export default function CategoryMenu() {
-  const [tabIndex, setTabIndex] = useState(2);
+  const [tabIndex, setTabIndex] = useState(1);
 
   return (
     <section className='container hidden h-auto w-full lg:block'>
