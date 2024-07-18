@@ -536,4 +536,97 @@ Uses LEDs, which consume up to 85% less energy and last 20 times longer than inc
       '/products/lighting/lighting2-p7.avif',
     ],
   },
+  {
+    id: 'korken-glass-container',
+    img1: '/newProds/listing/newProd1.webp',
+    img2: '/newProds/listing/newProd1-h.webp',
+    prodName: 'KORKEN',
+    prodInfo: 'Bottle shaped jar with lid, clear glass, 0.4 l (14 oz)',
+    price: 149,
+    prevPrice: 251,
+    rating: 4.5,
+    ratings: 169,
+    tags: [
+      'kitchen',
+      'food',
+      'kitchen room',
+      'glass',
+      'glass jar',
+      'jar',
+      'glass bottle',
+      'bottle',
+      'food storage',
+      'storage',
+      'storage and organisation',
+      'new low price',
+      'new',
+      'new-low-price',
+    ],
+    useDesc:
+      'KORKEN series is ideal for preserving pickles and jams, serving beverages or keeping your cookies crunchy. The airtight seal locks in all the goodness.',
+    articleNum: '705.413.68',
+    prodDetails: `MRP Rs.251 (incl. tax)
+
+Perfect for storing pickled vegetables, preserved berries or other tasty things from nature's pantry, as well as dry goods like pasta, granola, tea or yummy biscuits.
+
+The aroma-tight seal helps food retain its flavour and aroma longer.
+
+Easy to clean thanks to glass, which also does not absorb odours or discolour from tomato sauce, etc. Transparent, so nothing is forgotten and left behind.
+
+The jar can also be used as a serving bowl - or as a storage container, helping you keep things organised throughout the home.`,
+    designer: 'Anna-Maria Nilsson',
+    countryOfOrigin: 'China',
+    hasVariety: false,
+    images: [
+      '/newPods/productsDetails/newProd1-p1.webp',
+      '/newPods/productsDetails/newProd1-p2.webp',
+      '/newPods/productsDetails/newProd1-p3.avif',
+      '/newPods/productsDetails/newProd1-p4.avif',
+      '/newPods/productsDetails/newProd1-p5.avif',
+    ],
+  },
+  {
+    id: 'froejdefull-serving-bowl-white',
+    img1: '/newProds/listing/newProd2.avif',
+    img2: '/newProds/listing/newProd2-h.avif',
+    prodName: 'FRÖJDEFULL',
+    prodInfo: 'Serving bowl, white, 10x8 cm (4x3 ")',
+    price: 349,
+    prevPrice: 699,
+    rating: 5,
+    ratings: 1,
+    tags: [
+      'kitchen',
+      'food',
+      'kitchen room',
+      'glass',
+      'glass jar',
+      'jar',
+      'glass bottle',
+      'bottle',
+      'food storage',
+      'storage',
+      'storage and organisation',
+      'new low price',
+      'new',
+      'new-low-price',
+    ],
+    useDesc:
+      'Round, oval and organic shapes that you can combine in many different ways, for either serving or eating. The dinnerware"s durable material with a nice translucent shimmer makes your meal a joy.',
+    articleNum: '105.197.42',
+    prodDetails: `MRP Rs.489 (incl. tax)
+
+FRÖJDEFULL dinnerware comes in different shapes that can be combined harmoniously with each other or used separately.
+
+Made of fine china, an upgraded version of porcelain that adds a nice translucent shimmer to the dinnerware and makes it very durable.`,
+    designer: 'Wiebke Braasch',
+    countryOfOrigin: 'Thailand',
+    hasVariety: false,
+    images: [
+      '/newPods/productsDetails/newProd2-p1.avif',
+      '/newPods/productsDetails/newProd2-p2.avif',
+      '/newPods/productsDetails/newProd2-p3.avif',
+      '/newPods/productsDetails/newProd1-p5.webp',
+    ],
+  },
 ];
