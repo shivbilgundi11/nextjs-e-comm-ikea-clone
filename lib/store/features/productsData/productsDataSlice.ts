@@ -16,10 +16,12 @@ const productsDataSlice = createSlice({
   name: 'productsData',
   initialState,
   reducers: {
+    // Actio To Set Fetched Data To Global State(Store)...
     storeFetchedData: (state, action) => {
       state.data = action.payload;
     },
   },
 });
 
-export default productsDataSlice.actions;
+export const { storeFetchedData } = productsDataSlice.actions;
+export default productsDataSlice.reducer;

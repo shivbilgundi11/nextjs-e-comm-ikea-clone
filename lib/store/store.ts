@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import cartReducer from './features/cart/cartSlice';
+import productsDataReducer from './features/productsData/productsDataSlice';
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       cart: cartReducer,
+      productsData: productsDataReducer,
     },
   });
 };
