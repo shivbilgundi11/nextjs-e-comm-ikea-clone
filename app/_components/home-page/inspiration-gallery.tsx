@@ -34,7 +34,7 @@ export default function InspirationGallery() {
             return (
               <div
                 key={img.id}
-                className='relative mb-3 h-[80vh] w-full align-middle md:mb-5'
+                className='relative mb-3 h-[24vh] max-h-[700px] w-full align-middle sm:h-[34vh] md:mb-5 md:h-[45vh] lg:h-[75vh]'
               >
                 <Image
                   blurDataURL={`/assets${img.img1}`}
