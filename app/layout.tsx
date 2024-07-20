@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google';
 
 import { cn } from '@/lib/utils';
 
+import StoreProvider from './StoreProvider';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -27,7 +29,7 @@ export default function RootLayout({
         )}
         suppressHydrationWarning={true}
       >
-        {children}
+        <StoreProvider>{children}</StoreProvider>
       </body>
     </html>
   );
