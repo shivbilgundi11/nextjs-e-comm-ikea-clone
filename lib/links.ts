@@ -63,37 +63,37 @@ export const categories = [
     id: 'cat-1a2b3c',
     imageURL: '/category/newLowerPrice.png',
     category: 'New lower price',
-    path: '/cat/new-low-price',
+    path: '/cat/new-lower-price',
   },
   {
     id: 'cat-4d5e6f',
     imageURL: '/category/storage-organisation.png',
     category: 'Storage & organisation',
-    path: '/cat/storage-and-organisation',
+    path: '/cat/storage-and-organisations',
   },
   {
     id: 'cat-7g8h9i',
     imageURL: '/category/furniture.png',
     category: 'Furniture',
-    path: '/cat/furniture',
+    path: '/cat/furnitures',
   },
   {
     id: 'cat-j0k1l2',
     imageURL: '/category/beds-mattresses.png',
     category: 'Bed & mattresses',
-    path: '/cat/bed-and-mattresses',
+    path: '/cat/bed-and-matresses',
   },
   {
     id: 'cat-3m4n5o',
     imageURL: '/category/decoration.png',
     category: 'Decoration',
-    path: '/cat/decoration',
+    path: '/cat/decoration-items',
   },
   {
     id: 'cat-6p7q8r',
     imageURL: '/category/lighting.png',
     category: 'Lighting',
-    path: '/cat/lighting',
+    path: '/cat/lighting-items',
   },
 ];
 

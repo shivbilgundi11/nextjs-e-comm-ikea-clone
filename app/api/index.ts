@@ -38,7 +38,7 @@ adapter
 
 // Gets all listings of Bed & Matresses.
 adapter
-  .onGet('/api/listings/bed-&-matresses')
+  .onGet('/api/listings/bed-and-matresses')
   .reply(200, bedAndMatressesListings);
 
 // Get product detail by id.
