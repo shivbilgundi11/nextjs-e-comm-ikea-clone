@@ -6,7 +6,7 @@ export default function Hero() {
     <>
       <div className='container my-8 grid grid-cols-1 gap-3 overflow-hidden md:my-12 md:grid-cols-4 md:gap-5'>
         <div className='overflow-hidden md:col-span-2'>
-          <Link href={'/cat/new-low-price'}>
+          <Link href={'/cat/new-lower-price'}>
             <img src='/assets/hero/nlp1.png' alt='hero-img' />
           </Link>
         </div>
@@ -24,7 +24,7 @@ export default function Hero() {
             <Link href={'/p/froejdefull-serving-bowl-white'}>
               <img src='/assets/hero/nlp4.avif' alt='hero-img' />
             </Link>
-            <Link href={'/cat/new-low-price'}>
+            <Link href={'/cat/new-lower-price'}>
               <img src='/assets/hero/nlp5.png' alt='hero-img' />
             </Link>
           </div>
