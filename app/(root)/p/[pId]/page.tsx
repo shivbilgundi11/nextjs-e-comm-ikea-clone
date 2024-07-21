@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import ErrorBox from '@/app/_components/error';
 import Loader from '@/app/_components/loading';
+import ProDuctDetail from '@/app/_components/product-page/productDetail';
 import api from '@/app/api';
 
 export default function ProductDetail() {
@@ -13,7 +14,7 @@ export default function ProductDetail() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  console.log(data, error);
+  console.log(data);
 
   const params = useParams();
 
@@ -71,9 +72,7 @@ export default function ProductDetail() {
 
   return (
     <>
-      <main className='flex min-h-screen w-full flex-col items-center justify-center gap-5'>
-        <h1>ProductDetail Page</h1>
-      </main>
+      <ProDuctDetail prodInfo={data} />
     </>
   );
 }

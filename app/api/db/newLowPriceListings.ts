@@ -17,7 +17,8 @@ export const newLowePriceListings = [
     img1: '/listings/nlp/listing-nlp2.avif',
     img2: '/listings/nlp/listing-h-nlp2.avif',
     prodName: 'EKET',
-    prodInfo: 'Cabinet, brown walnut effect,',
+    prodInfo:
+      'Wall-mounted shelving unit, walnut effect, 35x25x35 cm (13 3/4x9 7/8x13 3/4 ")',
     price: 1700,
     prevPrice: 2100,
     rating: 4,
