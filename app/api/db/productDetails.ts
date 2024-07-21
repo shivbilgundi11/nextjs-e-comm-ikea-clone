@@ -84,7 +84,7 @@ Assembly is quick and easy, thanks to the wedge dowel that clicks into the pre-d
     ],
   },
   {
-    id: 'st&org1',
+    id: 'st-and-org1',
     prodName: 'BAGGEBO',
     prodInfo: 'Cabinet with door, white',
     price: 2290,
@@ -121,7 +121,9 @@ Combine with the rest of the BAGGEBO storage series and create a matched and com
     ],
   },
   {
-    id: 'st&org2',
+    id: 'st-and-org2',
+    img1: '/listings/st&org/listing-st&org2.webp',
+    img2: '/listings/st&org/listing-h-st&org2.avif',
     prodName: 'FJÄLLBO',
     prodInfo: 'Shelving unit, black',
     price: 9990,
@@ -269,7 +271,7 @@ The natural colours and materials create a bright and fresh expression in your h
     ],
   },
   {
-    id: 'bed&mat1',
+    id: 'bed-and-mat1',
     img1: '/listings/bed&matress/listing-bed&mat1.avif',
     img2: '/listings/bed&matress/listing-h-bed&mat1.avif',
     prodName: 'SONGESAND',
@@ -308,7 +310,7 @@ SONGESAND chest of drawers has a classic design with panelled drawer fronts.`,
     ],
   },
   {
-    id: 'bed&mat2',
+    id: 'bed-and-mat2',
     img1: '/listings/bed&matress/listing-bed&mat2.avif',
     img2: '/listings/bed&matress/listing-h-bed&mat2.avif',
     prodName: 'VESTMARKA',

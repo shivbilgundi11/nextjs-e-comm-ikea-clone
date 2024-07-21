@@ -1,7 +1,7 @@
 // Bed & Matresses Products Listings...
 export const bedAndMatressesListings = [
   {
-    id: 'bed&mat1',
+    id: 'bed-and-mat1',
     img1: '/listings/bed&matress/listing-bed&mat1.avif',
     img2: '/listings/bed&matress/listing-h-bed&mat1.avif',
     prodName: 'SONGESAND',
@@ -13,7 +13,7 @@ export const bedAndMatressesListings = [
     tags: ['furniture', 'bed', 'bed room', 'matress', 'sleep'],
   },
   {
-    id: 'bed&mat2',
+    id: 'bed-and-mat2',
     img1: '/listings/bed&matress/listing-bed&mat2.avif',
     img2: '/listings/bed&matress/listing-h-bed&mat2.avif',
     prodName: 'VESTMARKA',

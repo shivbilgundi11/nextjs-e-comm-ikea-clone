@@ -4,6 +4,7 @@ import axios, { AxiosError } from 'axios';
 import { useParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
+import ProductsListing from '@/app/_components/category-page/products-listing';
 import ErrorBox from '@/app/_components/error';
 import Loader from '@/app/_components/loading';
 import api from '@/app/api';
@@ -16,6 +17,26 @@ export default function App() {
   console.log(data, error);
 
   const params = useParams();
+  const { catId } = params;
+
+  function getHeading(category: string | string[]) {
+    switch (category) {
+      case 'new-lower-price':
+        return 'New lower price';
+      case 'storage-and-organisations':
+        return 'Storage & organisation';
+      case 'furnitures':
+        return 'Furniture';
+      case 'bed-and-matresses':
+        return 'Beds & mattresses';
+      case 'decoration-items':
+        return 'Decoration';
+      case 'lighting-items':
+        return 'Lighting';
+      default:
+        return 'Unknown category';
+    }
+  }
 
   const abortController = useRef<AbortController | null>(null);
 
@@ -71,8 +92,12 @@ export default function App() {
 
   return (
     <>
-      <main className='flex min-h-screen w-full flex-col items-center justify-center gap-5'>
-        <h1>Shop by {params.catId}</h1>
+      <main className='container flex h-auto w-full flex-col gap-y-7 py-6 md:gap-y-10 md:py-10 lg:py-12'>
+        <h2 className='text-2xl font-bold md:text-3xl lg:text-4xl'>
+          {getHeading(catId)}
+        </h2>
+
+        <ProductsListing products={data} />
       </main>
     </>
   );

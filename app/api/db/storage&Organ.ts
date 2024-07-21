@@ -1,7 +1,7 @@
 // Storage & Organisation Products Listings...
 export const storageAndOrganisationListings = [
   {
-    id: 'st&org1',
+    id: 'st-and-org1',
     img1: '/listings/st&org/listing-st&org1.avif',
     img2: '/listings/st&org/listing-h-st&org1.avif',
     prodName: 'BAGGEBO',
@@ -21,8 +21,8 @@ export const storageAndOrganisationListings = [
     ],
   },
   {
-    id: 'st&org2',
-    img1: '/listings/st&org/listing-st&org2.avif',
+    id: 'st-and-org2',
+    img1: '/listings/st&org/listing-st&org2.webp',
     img2: '/listings/st&org/listing-h-st&org2.avif',
     prodName: 'FJÄLLBO',
     prodInfo: 'Shelving unit, black',
