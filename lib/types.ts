@@ -36,4 +36,5 @@ export interface ProductDetailType {
   hasVariety: boolean;
   varietyType: string;
   varieties: ProductVariant[];
+  images: string[];
 }

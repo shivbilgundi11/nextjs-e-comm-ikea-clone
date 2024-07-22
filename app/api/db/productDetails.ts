@@ -581,11 +581,11 @@ The jar can also be used as a serving bowl - or as a storage container, helping 
     countryOfOrigin: 'China',
     hasVariety: false,
     images: [
-      '/newPods/productsDetails/newProd1-p1.webp',
-      '/newPods/productsDetails/newProd1-p2.webp',
-      '/newPods/productsDetails/newProd1-p3.avif',
-      '/newPods/productsDetails/newProd1-p4.avif',
-      '/newPods/productsDetails/newProd1-p5.avif',
+      '/newProds/productsDetails/newProd1-p1.webp',
+      '/newProds/productsDetails/newProd1-p2.webp',
+      '/newProds/productsDetails/newProd1-p3.avif',
+      '/newProds/productsDetails/newProd1-p4.avif',
+      '/newProds/productsDetails/newProd1-p5.avif',
     ],
   },
   {
@@ -626,10 +626,10 @@ Made of fine china, an upgraded version of porcelain that adds a nice translucen
     countryOfOrigin: 'Thailand',
     hasVariety: false,
     images: [
-      '/newPods/productsDetails/newProd2-p1.avif',
-      '/newPods/productsDetails/newProd2-p2.avif',
-      '/newPods/productsDetails/newProd2-p3.avif',
-      '/newPods/productsDetails/newProd1-p5.webp',
+      '/newProds/productsDetails/newProd2-p1.avif',
+      '/newProds/productsDetails/newProd2-p2.avif',
+      '/newProds/productsDetails/newProd2-p3.avif',
+      '/newProds/productsDetails/newProd2-p5.webp',
     ],
   },
 ];
