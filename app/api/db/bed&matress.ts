@@ -10,7 +10,15 @@ export const bedAndMatressesListings = [
     prevPrice: 43960,
     rating: 5,
     ratings: 5,
-    tags: ['furniture', 'bed', 'bed room', 'matress', 'sleep'],
+    tags: [
+      'furniture',
+      'bed',
+      'bedroom',
+      'matress',
+      'sleep',
+      'bed-frame',
+      'frame',
+    ],
   },
   {
     id: 'bed-and-mat2',
@@ -22,6 +30,6 @@ export const bedAndMatressesListings = [
     prevPrice: 18186,
     rating: 4,
     ratings: 102,
-    tags: ['bed matresses', 'bed room', 'matress', 'sleep'],
+    tags: ['bed', 'matresses', 'bedroom', 'matress', 'sleep'],
   },
 ];
