@@ -87,7 +87,7 @@ export default function App() {
   }
 
   if (error) {
-    return <ErrorBox />;
+    return <ErrorBox msg={`No products found for ${params.catId}`} />;
   }
 
   return (

@@ -413,7 +413,7 @@ Suitable for both indoor and outdoor use.`,
     tags: [
       'deco',
       'decorations',
-      'bed room',
+      'bedroom',
       'decoration',
       'living room',
       'hall',

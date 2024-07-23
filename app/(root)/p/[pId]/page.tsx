@@ -14,8 +14,6 @@ export default function ProductDetail() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  console.log(data);
-
   const params = useParams();
 
   const abortController = useRef<AbortController | null>(null);
@@ -67,7 +65,9 @@ export default function ProductDetail() {
   }
 
   if (error) {
-    return <ErrorBox />;
+    return (
+      <ErrorBox msg={`Product detail could not be found for ${params.pId}`} />
+    );
   }
 
   return (

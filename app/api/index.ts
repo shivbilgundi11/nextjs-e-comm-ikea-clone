@@ -7,6 +7,7 @@ import { furnitureListings } from './db/furnitures';
 import { lightingProductsListings } from './db/lighting';
 import { newLowePriceListings } from './db/newLowPriceListings';
 import { storageAndOrganisationListings } from './db/storage&Organ';
+import { getListingsByRoom } from './roomTypeListings';
 import { getProductById } from './singleProduct';
 
 // Creates a base axios instance
@@ -56,6 +57,23 @@ adapter.onGet(/\/api\/p\/[a-zA-Z0-9_&-]+$/).reply(function (
   }
 
   return [200, productDetail];
+});
+
+// Get products listings based on room.
+adapter.onGet(/\/api\/rooms\/([a-zA-Z0-9_&-]+)$/).reply(function (
+  config: AxiosRequestConfig,
+) {
+  const roomIdMatch =
+    config.url && config.url.match(/\/api\/rooms\/([a-zA-Z0-9_&-]+)$/);
+  const roomType = roomIdMatch && roomIdMatch[1];
+
+  const listings = roomType && getListingsByRoom(roomType);
+
+  if (!listings || listings.length === 0) {
+    return [404, { error: `No Products found for ${roomType}` }];
+  }
+
+  return [200, listings];
 });
 
 export default api;
