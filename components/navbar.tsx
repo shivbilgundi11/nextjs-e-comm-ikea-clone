@@ -10,6 +10,7 @@ import { TbShoppingBag } from 'react-icons/tb';
 import CreditsAd from '@/app/_components/credits';
 import { MobileNav } from '@/app/_components/mobile-nav';
 
+import CartItemsBadge from './cartBadge';
 import SearchBox from './search-box';
 import { Button } from './ui/button';
 
@@ -59,9 +60,10 @@ export default function Navbar() {
                 <Link href={'/shoppingcart'}>
                   <Button
                     variant={'ghost'}
-                    className='rounded-full p-3 text-xl font-bold hover:bg-[#dfdfdf]'
+                    className='relative rounded-full p-3 px-2 text-2xl font-bold hover:bg-[#dfdfdf]'
                   >
                     <TbShoppingBag />
+                    <CartItemsBadge />
                   </Button>
                 </Link>
                 <MobileNav />

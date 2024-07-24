@@ -1,16 +1,36 @@
+'use client';
+
 import { TbShoppingBagPlus } from 'react-icons/tb';
+
+import { addToCart } from '@/lib/store/features/cart/cartSlice';
+import { useAppDispatch } from '@/lib/store/hooks';
 
 import { Button } from './ui/button';
 
-export default function AddToCartBtn() {
+interface AddToCartProps {
+  pName: string;
+  img: string;
+  price: number;
+  id: string;
+}
+
+export default function AddToCartBtn({
+  pName,
+  img,
+  price,
+  id,
+}: AddToCartProps) {
+  const dispatch = useAppDispatch();
+
   return (
-    <>
-      <Button
-        variant={'ghost'}
-        className='rounded-full bg-[#004F93] p-2 text-2xl font-bold text-white hover:bg-[#004F93] hover:text-white'
-      >
-        <TbShoppingBagPlus />
-      </Button>
-    </>
+    <Button
+      variant={'ghost'}
+      className='rounded-full bg-[#004F93] p-2 text-2xl font-bold text-white hover:bg-[#004F93] hover:text-white'
+      onClick={() =>
+        dispatch(addToCart({ id, img, price, pName, quantity: 1 }))
+      }
+    >
+      <TbShoppingBagPlus />
+    </Button>
   );
 }

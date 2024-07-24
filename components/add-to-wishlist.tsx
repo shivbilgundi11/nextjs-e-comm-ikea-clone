@@ -7,7 +7,7 @@ export default function AddToWishlist() {
     <>
       <Button
         variant={'ghost'}
-        className='rounded-full bg-[#dfdfdf] p-3 text-xl font-bold hover:bg-transparent'
+        className='rounded-full p-3 text-xl font-bold hover:bg-[#dfdfdf]'
       >
         <PiHeartBold />
       </Button>

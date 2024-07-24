@@ -2,14 +2,16 @@ import Image from 'next/image';
 
 import AddToWishlist from '@/components/add-to-wishlist';
 import Ratings from '@/components/ratings';
-import { Button } from '@/components/ui/button';
 import { getImageUrl } from '@/lib/image';
 import { ProductDetailType } from '@/lib/types';
 import { formatPrice } from '@/lib/utils';
 
+import AddToBag from './add-to-bag';
+
 interface ProductDetailProps {
   prodInfo: ProductDetailType | undefined;
   varietyType: string | null;
+  // eslint-disable-next-line no-unused-vars
   handleClick: (type: string) => void;
 }
 
@@ -74,12 +76,12 @@ export default function ProductInfo({
             </div>
           )}
 
-          <Button
-            variant='ghost'
-            className='mt-5 w-full rounded-full bg-[#004F93] py-7 text-base text-white hover:bg-[#0f4778] hover:text-white'
-          >
-            Add to bag
-          </Button>
+          <AddToBag
+            pName={prodInfo?.prodName}
+            price={prodInfo?.price}
+            img={prodInfo?.img1}
+            id={prodInfo?.id}
+          />
         </div>
       )}
     </>

@@ -14,8 +14,6 @@ export default function App() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  console.log(data, error);
-
   const params = useParams();
   const { catId } = params;
 

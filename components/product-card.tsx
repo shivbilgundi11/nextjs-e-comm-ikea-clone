@@ -18,8 +18,8 @@ const ProductCard = ({ cardData }: ProductCardProps) => {
   return (
     <>
       {cardData && (
-        <Link href={`/p/${cardData?.id}`}>
-          <div className='flex h-full w-full flex-col gap-y-3'>
+        <div className='flex h-full w-full flex-col gap-y-3'>
+          <Link href={`/p/${cardData?.id}`}>
             <div className='group relative aspect-square h-full w-full'>
               <Image
                 src={getImageUrl(cardData?.img1)}
@@ -38,36 +38,43 @@ const ProductCard = ({ cardData }: ProductCardProps) => {
                 className='opacity-0 group-hover:opacity-100'
               />
             </div>
-            <div className='mt-1 flex flex-col gap-y-1'>
+          </Link>
+          <div className='mt-1 flex flex-col gap-y-1'>
+            <Link href={`/p/${cardData?.id}`}>
               <h3 className='text-sm font-bold'>{cardData?.prodName}</h3>
-              <p className='text-sm text-gray-700'>{cardData?.prodInfo}</p>
+            </Link>
+            <p className='text-sm text-gray-700'>{cardData?.prodInfo}</p>
 
-              <p className='mt-1 text-sm font-bold'>
-                Rs.
-                <big className='text-3xl'>{formatPrice(cardData?.price)}</big>
-              </p>
-              <p className='text-xs font-medium text-gray-700'>
-                Previous price Rs.{formatPrice(cardData?.prevPrice)}
-              </p>
-            </div>
-
-            <Ratings rating={cardData?.rating} ratings={cardData?.ratings} />
-
-            <div className='gx-2 mt-2 flex gap-x-2'>
-              <AddToCartBtn />
-              <AddToWishlist />
-            </div>
-
-            <div className='flex flex-col gap-y-1'>
-              <p className='inline-flex items-center gap-x-2'>
-                <GoDotFill color='green' /> In stock
-              </p>
-              <p className='inline-flex items-center gap-x-2'>
-                <GoDotFill color='green' /> Available for delivery
-              </p>
-            </div>
+            <p className='mt-1 text-sm font-bold'>
+              Rs.
+              <big className='text-3xl'>{formatPrice(cardData?.price)}</big>
+            </p>
+            <p className='text-xs font-medium text-gray-700'>
+              Previous price Rs.{formatPrice(cardData?.prevPrice)}
+            </p>
           </div>
-        </Link>
+
+          <Ratings rating={cardData?.rating} ratings={cardData?.ratings} />
+
+          <div className='gx-2 mt-2 flex gap-x-2'>
+            <AddToCartBtn
+              pName={cardData?.prodName}
+              price={cardData?.price}
+              img={cardData?.img1}
+              id={cardData?.id}
+            />
+            <AddToWishlist />
+          </div>
+
+          <div className='flex flex-col gap-y-1'>
+            <p className='inline-flex items-center gap-x-2'>
+              <GoDotFill color='green' /> In stock
+            </p>
+            <p className='inline-flex items-center gap-x-2'>
+              <GoDotFill color='green' /> Available for delivery
+            </p>
+          </div>
+        </div>
       )}
     </>
   );
