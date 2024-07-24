@@ -7,7 +7,8 @@ import { furnitureListings } from './db/furnitures';
 import { lightingProductsListings } from './db/lighting';
 import { newLowePriceListings } from './db/newLowPriceListings';
 import { storageAndOrganisationListings } from './db/storage&Organ';
-import { getListingsByRoom } from './roomTypeListings';
+import { getListingsByRoomType } from './roomTypeListings';
+import { getListingsBySearchQuery } from './searchQueryListings';
 import { getProductById } from './singleProduct';
 
 // Creates a base axios instance
@@ -67,12 +68,32 @@ adapter.onGet(/\/api\/rooms\/([a-zA-Z0-9_&-]+)$/).reply(function (
     config.url && config.url.match(/\/api\/rooms\/([a-zA-Z0-9_&-]+)$/);
   const roomType = roomIdMatch && roomIdMatch[1];
 
-  const listings = roomType && getListingsByRoom(roomType);
+  const listings = roomType && getListingsByRoomType(roomType);
 
   if (!listings || listings.length === 0) {
     return [404, { error: `No Products found for ${roomType}` }];
   }
 
+  return [200, listings];
+});
+
+// Get products listings based on search query.
+adapter.onGet(/\/api\/search\/(.+)$/).reply(function (
+  config: AxiosRequestConfig,
+) {
+  // Extract the query from the URL and decode it
+  const searchQueryMatch = config.url?.match(/\/api\/search\/(.+)$/);
+  const query = searchQueryMatch ? decodeURIComponent(searchQueryMatch[1]) : '';
+
+  // Fetch listings based on the query
+  const listings = query ? getListingsBySearchQuery(query) : [];
+
+  // Return 404 if no listings are found
+  if (listings.length === 0) {
+    return [404, { error: `No Products found for ${query}` }];
+  }
+
+  // Return listings with a 200 status
   return [200, listings];
 });
 
