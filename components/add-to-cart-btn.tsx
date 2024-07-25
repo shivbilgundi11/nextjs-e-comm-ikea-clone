@@ -12,6 +12,7 @@ interface AddToCartProps {
   img: string;
   price: number;
   id: string;
+  pInfo: string;
 }
 
 export default function AddToCartBtn({
@@ -19,6 +20,7 @@ export default function AddToCartBtn({
   img,
   price,
   id,
+  pInfo,
 }: AddToCartProps) {
   const dispatch = useAppDispatch();
 
@@ -27,7 +29,7 @@ export default function AddToCartBtn({
       variant={'ghost'}
       className='rounded-full bg-[#004F93] p-2 text-2xl font-bold text-white hover:bg-[#004F93] hover:text-white'
       onClick={() =>
-        dispatch(addToCart({ id, img, price, pName, quantity: 1 }))
+        dispatch(addToCart({ id, img, price, pName, pInfo, quantity: 1 }))
       }
     >
       <TbShoppingBagPlus />

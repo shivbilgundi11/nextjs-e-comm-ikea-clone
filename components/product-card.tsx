@@ -62,6 +62,7 @@ const ProductCard = ({ cardData }: ProductCardProps) => {
               price={cardData?.price}
               img={cardData?.img1}
               id={cardData?.id}
+              pInfo={cardData?.prodInfo}
             />
             <AddToWishlist />
           </div>
