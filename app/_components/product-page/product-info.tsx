@@ -81,6 +81,7 @@ export default function ProductInfo({
             price={prodInfo?.price}
             img={prodInfo?.img1}
             id={prodInfo?.id}
+            pInfo={prodInfo?.prodInfo}
           />
         </div>
       )}
