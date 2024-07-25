@@ -1,4 +1,4 @@
-import { productDetails } from './db/productDetails';
+import { productDetails } from "./db/productDetails";
 
 // Function to get listings by search query
 export const getListingsByRoomType = (query: string) => {

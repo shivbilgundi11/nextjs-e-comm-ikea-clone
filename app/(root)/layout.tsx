@@ -1,10 +1,10 @@
-import CategoryMenu from '@/components/category-menu';
-import Footer from '@/components/footer';
-import Navbar from '@/components/navbar';
-import { Toaster } from '@/components/ui/toast';
+import CategoryMenu from "@/components/category-menu";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import { Toaster } from "@/components/ui/toast";
 
-import BackToTop from '../_components/back-to-top';
-import ChatBox from '../_components/chat-box';
+import BackToTop from "../_components/back-to-top";
+import ChatBox from "../_components/chat-box";
 
 export default function RootLayout({
   children,

@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { TbShoppingBagPlus } from 'react-icons/tb';
-import { toast } from 'sonner';
+import { TbShoppingBagPlus } from "react-icons/tb";
+import { toast } from "sonner";
 
-import { addToCart } from '@/lib/store/features/cart/cartSlice';
-import { useAppDispatch } from '@/lib/store/hooks';
+import { addToCart } from "@/lib/store/features/cart/cartSlice";
+import { useAppDispatch } from "@/lib/store/hooks";
 
-import { Button } from './ui/button';
+import { Button } from "./ui/button";
 
 interface AddToCartProps {
   pName: string;
@@ -32,8 +32,8 @@ export default function AddToCartBtn({
 
   return (
     <Button
-      variant={'ghost'}
-      className='rounded-full bg-[#004F93] p-2 text-2xl font-bold text-white hover:bg-[#004F93] hover:text-white'
+      variant={"ghost"}
+      className="rounded-full bg-[#004F93] p-2 text-2xl font-bold text-white hover:bg-[#004F93] hover:text-white"
       onClick={handleAddToCart}
     >
       <TbShoppingBagPlus />

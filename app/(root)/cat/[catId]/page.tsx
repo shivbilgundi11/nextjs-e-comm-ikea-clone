@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import axios, { AxiosError } from 'axios';
-import { useParams } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import axios, { AxiosError } from "axios";
+import { useParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
-import ProductsListing from '@/app/_components/category-page/products-listing';
-import ErrorBox from '@/app/_components/error';
-import Loader from '@/app/_components/loading';
-import api from '@/app/api';
+import ProductsListing from "@/app/_components/category-page/products-listing";
+import ErrorBox from "@/app/_components/error";
+import Loader from "@/app/_components/loading";
+import api from "@/app/api";
 
 export default function App() {
   const [data, setData] = useState();
@@ -19,20 +19,20 @@ export default function App() {
 
   function getHeading(category: string | string[]) {
     switch (category) {
-      case 'new-lower-price':
-        return 'New lower price';
-      case 'storage-and-organisations':
-        return 'Storage & organisation';
-      case 'furnitures':
-        return 'Furniture';
-      case 'bed-and-matresses':
-        return 'Beds & mattresses';
-      case 'decoration-items':
-        return 'Decoration';
-      case 'lighting-items':
-        return 'Lighting';
+      case "new-lower-price":
+        return "New lower price";
+      case "storage-and-organisations":
+        return "Storage & organisation";
+      case "furnitures":
+        return "Furniture";
+      case "bed-and-matresses":
+        return "Beds & mattresses";
+      case "decoration-items":
+        return "Decoration";
+      case "lighting-items":
+        return "Lighting";
       default:
-        return 'Unknown category';
+        return "Unknown category";
     }
   }
 
@@ -57,15 +57,15 @@ export default function App() {
           if (axiosError.response?.status === 404) {
             setError(true);
             // Handle 404 error
-            console.error('Product not found:', axiosError.message);
+            console.error("Product not found:", axiosError.message);
             // Display a user-friendly message or handle the error appropriately
           } else {
             // Handle other Axios errors
-            console.error('Request failed:', axiosError.message);
+            console.error("Request failed:", axiosError.message);
           }
         } else {
           // Non-Axios error (e.g., network error)
-          console.error('Network error:', error);
+          console.error("Network error:", error);
         }
       } finally {
         setLoading(false);
@@ -90,8 +90,8 @@ export default function App() {
 
   return (
     <>
-      <main className='container flex h-auto w-full flex-col gap-y-7 py-6 md:gap-y-10 md:py-10 lg:py-12'>
-        <h2 className='text-2xl font-bold md:text-3xl lg:text-4xl'>
+      <main className="container flex h-auto w-full flex-col gap-y-7 py-6 md:gap-y-10 md:py-10 lg:py-12">
+        <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
           {getHeading(catId)}
         </h2>
 

@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import axios, { AxiosError } from 'axios';
-import { useParams } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import axios, { AxiosError } from "axios";
+import { useParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
-import ErrorBox from '@/app/_components/error';
-import Loader from '@/app/_components/loading';
-import ProDuctDetail from '@/app/_components/product-page/productDetail';
-import api from '@/app/api';
+import ErrorBox from "@/app/_components/error";
+import Loader from "@/app/_components/loading";
+import ProDuctDetail from "@/app/_components/product-page/productDetail";
+import api from "@/app/api";
 
 export default function ProductDetail() {
   const [data, setData] = useState();
@@ -37,15 +37,15 @@ export default function ProductDetail() {
           if (axiosError.response?.status === 404) {
             setError(true);
             // Handle 404 error
-            console.error('Product not found:', axiosError.message);
+            console.error("Product not found:", axiosError.message);
             // Display a user-friendly message or handle the error appropriately
           } else {
             // Handle other Axios errors
-            console.error('Request failed:', axiosError.message);
+            console.error("Request failed:", axiosError.message);
           }
         } else {
           // Non-Axios error (e.g., network error)
-          console.error('Network error:', error);
+          console.error("Network error:", error);
         }
       } finally {
         setLoading(false);

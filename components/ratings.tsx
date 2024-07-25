@@ -1,4 +1,4 @@
-import { FaRegStar, FaStar, FaStarHalfAlt } from 'react-icons/fa';
+import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 interface Props {
   rating: number;
@@ -15,20 +15,20 @@ export default function Ratings({ rating, ratings }: Props) {
     return (
       <>
         {[...Array(fullStars)].map((_, i) => (
-          <FaStar key={i} color='black' />
+          <FaStar key={i} color="black" />
         ))}
-        {halfStar && <FaStarHalfAlt color='black' />}
+        {halfStar && <FaStarHalfAlt color="black" />}
         {[...Array(emptyStars)].map((_, i) => (
-          <FaRegStar key={i} color='black' />
+          <FaRegStar key={i} color="black" />
         ))}
       </>
     );
   };
 
   return (
-    <div className='flex items-center gap-x-1'>
+    <div className="flex items-center gap-x-1">
       {renderStars()}
-      <span className='ml-1 text-sm'>({ratings} ratings)</span>
+      <span className="ml-1 text-sm">({ratings} ratings)</span>
     </div>
   );
 }

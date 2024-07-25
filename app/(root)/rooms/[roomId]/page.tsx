@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import axios, { AxiosError } from 'axios';
-import { useParams } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import axios, { AxiosError } from "axios";
+import { useParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
-import ProductsListing from '@/app/_components/category-page/products-listing';
-import ErrorBox from '@/app/_components/error';
-import Loader from '@/app/_components/loading';
-import api from '@/app/api';
+import ProductsListing from "@/app/_components/category-page/products-listing";
+import ErrorBox from "@/app/_components/error";
+import Loader from "@/app/_components/loading";
+import api from "@/app/api";
 
 export default function ListingsByRoomType() {
   const [fetchedData, setFetchedData] = useState();
@@ -44,11 +44,11 @@ export default function ListingsByRoomType() {
             // Display a user-friendly message or handle the error appropriately
           } else {
             // Handle other Axios errors
-            console.error('Request failed:', axiosError.message);
+            console.error("Request failed:", axiosError.message);
           }
         } else {
           // Non-Axios error (e.g., network error)
-          console.error('Network error:', error);
+          console.error("Network error:", error);
         }
       } finally {
         setLoading(false);
@@ -74,8 +74,8 @@ export default function ListingsByRoomType() {
   return (
     <>
       {fetchedData && (
-        <main className='container flex h-auto w-full flex-col gap-y-7 py-6 md:gap-y-10 md:py-10 lg:py-12'>
-          <h2 className='text-2xl font-bold md:text-3xl lg:text-4xl'>
+        <main className="container flex h-auto w-full flex-col gap-y-7 py-6 md:gap-y-10 md:py-10 lg:py-12">
+          <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
             Products Found For {(params.roomId as string).toLocaleLowerCase()}
           </h2>
 

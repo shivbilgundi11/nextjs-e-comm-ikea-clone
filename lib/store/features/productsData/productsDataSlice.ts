@@ -1,6 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-import { ProductDetailType } from '@/lib/types';
+import { ProductDetailType } from "@/lib/types";
 
 interface InitialState {
   data: ProductDetailType[];
@@ -13,7 +13,7 @@ const initialState: InitialState = {
 };
 
 const productsDataSlice = createSlice({
-  name: 'productsData',
+  name: "productsData",
   initialState,
   reducers: {
     // Actio To Set Fetched Data To Global State(Store)...
