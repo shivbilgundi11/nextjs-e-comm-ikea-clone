@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import AddToWishlist from "@/components/add-to-wishlist";
 import Ratings from "@/components/ratings";
@@ -46,32 +47,45 @@ export default function ProductInfo({
           <Ratings rating={prodInfo?.rating} ratings={prodInfo?.ratings} />
 
           {prodInfo?.hasVariety && (
-            <div className="group mt-2 flex flex-col gap-y-2">
-              <h4 className="text-sm font-bold group-hover:underline">
+            <div className="group mt-2 flex flex-col">
+              <h4 className="mb-1 font-bold group-hover:underline">
                 {prodInfo?.varietyType}
               </h4>
+              <p className="text-sm font-medium text-gray-800">
+                {prodInfo?.hasVariety && prodInfo?.varieties[0].variantType}
+              </p>
               <div className="flex h-auto flex-wrap gap-4 py-4 md:gap-5 md:p-6">
-                {prodInfo?.varieties.map((variety) => (
-                  <button
-                    className={`relative h-auto w-max rounded-md border-2 p-2 ${
-                      varietyType === variety.variantType
-                        ? "border-black"
-                        : "border-transparent"
-                    }`}
-                    key={variety.id}
-                    onClick={() => handleClick(variety.variantType)}
-                  >
-                    <div className="relative h-[50px] w-[50px] md:h-[70px] md:w-[70px]">
-                      <Image
-                        src={getImageUrl(variety.images[0])}
-                        alt={variety.variantType}
-                        layout="fill"
-                        objectFit="contain"
-                        objectPosition="center"
-                      />
-                    </div>
-                  </button>
-                ))}
+                {prodInfo?.varieties.map((variety, index) => {
+                  const buttonContent = (
+                    <button
+                      className={`relative h-auto w-max rounded-md border-2 p-2 ${
+                        varietyType === variety.variantType
+                          ? "border-black"
+                          : "border-transparent"
+                      }`}
+                      key={variety.id}
+                      onClick={() => handleClick(variety.variantType)}
+                    >
+                      <div className="relative h-[50px] w-[50px] md:h-[70px] md:w-[70px]">
+                        <Image
+                          src={getImageUrl(variety.images[0])}
+                          alt={variety.variantType}
+                          layout="fill"
+                          objectFit="contain"
+                          objectPosition="center"
+                        />
+                      </div>
+                    </button>
+                  );
+
+                  return index > 0 ? (
+                    <Link href={variety.path} key={variety.id}>
+                      {buttonContent}
+                    </Link>
+                  ) : (
+                    buttonContent
+                  );
+                })}
               </div>
             </div>
           )}

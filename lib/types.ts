@@ -14,6 +14,7 @@ export interface SingleProductType {
 interface ProductVariant {
   id: number;
   variantType: string;
+  path: string;
   images: string[];
 }
 

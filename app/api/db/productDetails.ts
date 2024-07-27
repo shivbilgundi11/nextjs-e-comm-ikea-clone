@@ -109,10 +109,77 @@ Assembly is quick and easy, thanks to the wedge dowel that clicks into the pre-d
       {
         id: 2,
         variantType: "White",
+        path: "/p/eket-white",
         images: [
           "/products/nlp/nlp2-p1-v2.avif",
           "/products/nlp/nlp2-p2-v2.avif",
           "/products/nlp/nlp2-p3-v2.avif",
+        ],
+      },
+    ],
+  },
+  {
+    id: "eket-white",
+    img1: "/listings/nlp/listing-nlp2.avif",
+    img2: "/listings/nlp/listing-h-nlp2.avif",
+    prodName: "EKET",
+    prodInfo:
+      'Wall-mounted shelving unit, walnut effect, 35x25x35 cm (13 3/4x9 7/8x13 3/4 ")',
+    price: 1700,
+    prevPrice: 2100,
+    rating: 4,
+    ratings: 273,
+    tags: [
+      "Storage",
+      "Cabinet",
+      "Organiser",
+      "Bedroom",
+      "Living Room",
+      "Kitchen",
+      "kitchen",
+      "kitchen-room",
+      "kitchenroom",
+      "kitchen-items",
+      "livingroom",
+      "living-room",
+      "living room",
+      "home-office",
+      "home office",
+      "office",
+    ],
+    useDesc:
+      "This clever little cube is always ready to lend a hand, whether it’s storing, displaying or emptying your pockets. Choose legs/feet to place it on the floor or suspension rails for mounting on the wall.",
+    articleNum: "405.305.78",
+    prodDetails: `MRP Rs.2,800 (incl. tax)
+
+A simple unit can be enough storage for a limited space or the foundation for a larger storage solution if your needs change.
+
+You can choose to place the cabinet on the floor or mount it on the wall to free up floor space.
+
+Assembly is quick and easy, thanks to the wedge dowel that clicks into the pre-drilled holes.`,
+    designer: "Jon Karlsson",
+    countryOfOrigin: "Poland",
+    hasVariety: true,
+    varietyType: "Choose Colour",
+    varieties: [
+      {
+        id: 1,
+        variantType: "White",
+        path: "/p/eket-white",
+        images: [
+          "/products/nlp/nlp2-p1-v2.avif",
+          "/products/nlp/nlp2-p2-v2.avif",
+          "/products/nlp/nlp2-p3-v2.avif",
+        ],
+      },
+      {
+        id: 2,
+        variantType: "Brown walnut effect",
+        path: "/p/nlp2",
+        images: [
+          "/products/nlp/nlp2-p1.avif",
+          "/products/nlp/nlp2-p2.avif",
+          "/products/nlp/nlp2-p3.avif",
         ],
       },
     ],
