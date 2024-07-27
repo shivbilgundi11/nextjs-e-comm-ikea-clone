@@ -1,3 +1,5 @@
+import path from "path";
+
 export const productDetails = [
   {
     id: "nlp1",
@@ -365,6 +367,7 @@ The elegant, fixed cover has a perfect fit that will last over time. You can cho
       {
         id: 1,
         variantType: "Kilanda light beige",
+        path: "/p/furnit1",
         images: [
           "/products/furniture/furnit1-p1.avif",
           "/products/furniture/furnit1-p2.avif",
@@ -376,12 +379,84 @@ The elegant, fixed cover has a perfect fit that will last over time. You can cho
       {
         id: 2,
         variantType: "Kelinge grey-turquoise",
+        path: "/p/furnit1-v2",
         images: [
           "/products/furniture/furnit1-p1-v2.avif",
           "/products/furniture/furnit1-p2-v2.webp",
           "/products/furniture/furnit1-p3-v2.jpg",
           "/products/furniture/furnit1-p4-v2.avif",
           "/products/furniture/furnit1-p5-v2.avif",
+        ],
+      },
+    ],
+  },
+  {
+    id: "furnit1-v2",
+    img1: "/listings/furniture/listing-furnit1.avif",
+    img2: "/listings/furniture/listing-h-furnit1.avif",
+    prodName: "EKENÄSET",
+    prodInfo: "2-seat sofa, Kilanda light beige",
+    price: 24990,
+    prevPrice: 37786,
+    rating: 4.5,
+    ratings: 9,
+    tags: [
+      "Furniture",
+      "furniture",
+      "furnitures",
+      "sofa",
+      "Living-Room",
+      "living-Room",
+      "Living",
+      "sofa",
+      "sofas",
+      "2 seat sofa",
+      "3-seat sofa",
+      "EKENÄSET",
+    ],
+    useDesc:
+      "A slender and robust sofa inspired by 1950s Scandinavian design. Tall legs in solid wood and an angled frame enhance the retro vibe, as does the stained finish with a visible, natural grain pattern.",
+    articleNum: "205.335.06",
+    prodDetails: `MRP Rs.37,786 (incl. tax)
+
+Clean lines and supportive comfort, regardless if you’re reading, socialising with friends or just relaxing for a moment.
+
+Each sofa has a unique expression since the wooden frame is first stained in a dark-brown tone and then covered with clear lacquer that makes the wood’s natural grains visible.
+
+High-resilience foam in the seat and back makes the sofa regain its shape when you stand up, and it’s complemented with zigzag springs in the seat and supportive fabric in the back for a firm comfort.
+
+You will sit stable and steady for years to come since the frame is made of hardwearing solid wood. You also enjoy a relaxed sitting position thanks to the angled backrest.
+
+The tall legs in solid wood make it easy to vacuum or reach things hiding under the sofa to avoid clutter.
+
+The elegant, fixed cover has a perfect fit that will last over time. You can choose from different covers and find one that suits you and your home.`,
+    designer: "IKEA of Sweden",
+    countryOfOrigin: "China",
+    hasVariety: true,
+    varietyType: "Choose cover",
+    varieties: [
+      {
+        id: 1,
+        variantType: "Kelinge grey-turquoise",
+        path: "/p/furnit1-v2",
+        images: [
+          "/products/furniture/furnit1-p1-v2.avif",
+          "/products/furniture/furnit1-p2-v2.webp",
+          "/products/furniture/furnit1-p3-v2.jpg",
+          "/products/furniture/furnit1-p4-v2.avif",
+          "/products/furniture/furnit1-p5-v2.avif",
+        ],
+      },
+      {
+        id: 2,
+        variantType: "Kilanda light beige",
+        path: "/p/furnit1",
+        images: [
+          "/products/furniture/furnit1-p1.avif",
+          "/products/furniture/furnit1-p2.avif",
+          "/products/furniture/furnit1-p3.avif",
+          "/products/furniture/furnit1-p4.avif",
+          "/products/furniture/furnit1-p5.avif",
         ],
       },
     ],
