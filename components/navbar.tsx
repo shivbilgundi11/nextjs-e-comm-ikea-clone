@@ -1,9 +1,15 @@
 "use client";
 
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 import Image from "next/image";
 import Link from "next/link";
 import Headroom from "react-headroom";
-import { MdOutlinePersonOutline } from "react-icons/md";
+// import { MdOutlinePersonOutline } from "react-icons/md";
 import { PiHeartBold } from "react-icons/pi";
 import { TbShoppingBag } from "react-icons/tb";
 
@@ -38,7 +44,7 @@ export default function Navbar() {
               </div>
 
               <div className="flex h-full w-max items-center gap-x-1">
-                <Link href={"/"}>
+                {/* <Link href={"/sign-in"}>
                   <Button
                     variant={"ghost"}
                     className="rounded-full p-3 font-normal hover:bg-[#dfdfdf]"
@@ -46,7 +52,14 @@ export default function Navbar() {
                     <MdOutlinePersonOutline className="text-xl lg:mr-2" />{" "}
                     <p className="hidden lg:inline-block">Hej! Log in</p>
                   </Button>
-                </Link>
+                </Link> */}
+
+                <SignedOut>
+                  <SignInButton />
+                </SignedOut>
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
 
                 <Link href={"/favourites"}>
                   <Button
