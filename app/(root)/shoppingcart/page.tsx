@@ -16,7 +16,7 @@ export default function Cart() {
   const state = useAppSelector((state) => state.cart.items);
 
   const subTotal = state.reduce((prevProd, currProd) => {
-    return prevProd + currProd.price * currProd.quantity;
+    return prevProd + currProd.prodData.price * currProd.quantity;
   }, 0);
 
   useEffect(() => {
@@ -45,13 +45,9 @@ export default function Cart() {
               {state.map((item) => {
                 return (
                   <CartItem
-                    key={item?.id}
-                    pName={item?.pName}
-                    id={item?.id}
-                    img={item?.img}
-                    price={item?.price}
-                    quantity={item?.quantity}
-                    pInfo={item?.pInfo}
+                    key={item?.prodData?.id}
+                    itemInfo={item.prodData}
+                    qt={item.quantity}
                   />
                 );
               })}

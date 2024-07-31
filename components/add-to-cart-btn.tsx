@@ -5,29 +5,20 @@ import { toast } from "sonner";
 
 import { addToCart } from "@/lib/store/features/cart/cartSlice";
 import { useAppDispatch } from "@/lib/store/hooks";
+import { ProductDetailType, SingleProductType } from "@/lib/types";
 
 import { Button } from "./ui/button";
 
 interface AddToCartProps {
-  pName: string;
-  img: string;
-  price: number;
-  id: string;
-  pInfo: string;
+  prodData: ProductDetailType | SingleProductType;
 }
 
-export default function AddToCartBtn({
-  pName,
-  img,
-  price,
-  id,
-  pInfo,
-}: AddToCartProps) {
+export default function AddToCartBtn({ prodData }: AddToCartProps) {
   const dispatch = useAppDispatch();
 
   const handleAddToCart = () => {
-    dispatch(addToCart({ id, img, price, pName, pInfo, quantity: 1 }));
-    toast(`${pName} added to cart!`);
+    dispatch(addToCart({ prodData, quantity: 1 }));
+    toast(`${prodData?.prodName} added to cart!`);
   };
 
   return (

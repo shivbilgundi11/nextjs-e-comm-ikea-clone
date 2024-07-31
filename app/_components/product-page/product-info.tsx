@@ -90,13 +90,7 @@ export default function ProductInfo({
             </div>
           )}
 
-          <AddToBag
-            pName={prodInfo?.prodName}
-            price={prodInfo?.price}
-            img={prodInfo?.img1}
-            id={prodInfo?.id}
-            pInfo={prodInfo?.prodInfo}
-          />
+          <AddToBag prodInfo={prodInfo} />
         </div>
       )}
     </>

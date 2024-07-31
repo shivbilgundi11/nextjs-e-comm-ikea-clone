@@ -57,13 +57,7 @@ const ProductCard = ({ cardData }: ProductCardProps) => {
           <Ratings rating={cardData?.rating} ratings={cardData?.ratings} />
 
           <div className="gx-2 mt-2 flex gap-x-2">
-            <AddToCartBtn
-              pName={cardData?.prodName}
-              price={cardData?.price}
-              img={cardData?.img1}
-              id={cardData?.id}
-              pInfo={cardData?.prodInfo}
-            />
+            <AddToCartBtn prodData={cardData} />
             <AddToWishlist prodData={cardData} id={cardData?.id} />
           </div>
 

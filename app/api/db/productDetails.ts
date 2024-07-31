@@ -1,5 +1,3 @@
-import path from "path";
-
 export const productDetails = [
   {
     id: "nlp1",
@@ -122,8 +120,8 @@ Assembly is quick and easy, thanks to the wedge dowel that clicks into the pre-d
   },
   {
     id: "eket-white",
-    img1: "/listings/nlp/listing-nlp2.avif",
-    img2: "/listings/nlp/listing-h-nlp2.avif",
+    img1: "/products/nlp/nlp2-p1-v2.avif",
+    img2: "/products/nlp/nlp2-p2-v2.avif",
     prodName: "EKET",
     prodInfo:
       'Wall-mounted shelving unit, walnut effect, 35x25x35 cm (13 3/4x9 7/8x13 3/4 ")',

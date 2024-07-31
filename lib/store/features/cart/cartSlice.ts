@@ -1,12 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import { ProductDetailType, SingleProductType } from "@/lib/types";
+
 interface CartItem {
-  id: string;
+  prodData: ProductDetailType | SingleProductType;
   quantity: number;
-  img: string;
-  price: number;
-  pInfo: string;
-  pName: string;
 }
 
 interface CartState {
@@ -23,64 +21,60 @@ const cartSlice = createSlice({
   reducers: {
     // Add To Cart...
     addToCart: (state, action) => {
-      const { id, img, price, pName, pInfo, quantity } = action.payload;
+      const { prodData, quantity } = action.payload;
 
-      const existingItem = state.items.find((item) => id === item.id);
+      const existingItem = state.items.find(
+        (item) => prodData.id === item.prodData.id,
+      );
 
       if (existingItem) {
-        if (existingItem.quantity === 8) {
-          existingItem.quantity = existingItem.quantity;
-        } else {
-          existingItem.quantity++;
-        }
+        existingItem.quantity = Math.min(existingItem.quantity + quantity, 8);
       } else {
-        state.items.push({ id, img, price, pName, pInfo, quantity });
+        state.items.push({ prodData, quantity });
       }
     },
 
-    // Add To Cart...
+    // Add To Bag...
     addToBag: (state, action) => {
-      const { id, img, price, pName, pInfo, quantity } = action.payload;
+      const { prodData, quantity } = action.payload;
 
-      const existingItem = state.items.find((item) => id === item.id);
+      const existingItem = state.items.find(
+        (item) => prodData.id === item.prodData.id,
+      );
 
-      if (existingItem) {
-        return;
-      } else {
-        state.items.push({ id, img, price, pName, pInfo, quantity });
+      if (!existingItem) {
+        state.items.push({ prodData, quantity });
       }
     },
 
     // Remove From Cart...
     removeFromCart: (state, action) => {
-      state.items = state.items.filter((item) => item.id !== action.payload);
+      state.items = state.items.filter(
+        (item) => item.prodData.id !== action.payload,
+      );
     },
 
     // Increase Product Quantity...
     increaseProdQuantity: (state, action) => {
       const existingItem = state.items.find(
-        (item) => item.id === action.payload,
+        (item) => item.prodData.id === action.payload,
       );
 
       if (existingItem) {
-        if (existingItem.quantity === 8) {
-          existingItem.quantity = existingItem.quantity;
-        } else {
-          existingItem.quantity++;
-        }
+        existingItem.quantity = Math.min(existingItem.quantity + 1, 8);
       }
     },
 
     // Decrease Product Quantity...
     decreaseProdQuantity: (state, action) => {
       const existingItem = state.items.find(
-        (item) => item.id === action.payload,
+        (item) => item.prodData.id === action.payload,
       );
 
       if (existingItem) {
         if (existingItem.quantity === 1) {
           state.items = state.items.filter(
-            (item) => item.id !== action.payload,
+            (item) => item.prodData.id !== action.payload,
           );
         } else {
           existingItem.quantity--;
