@@ -15,20 +15,20 @@ export default function Ratings({ rating, ratings }: Props) {
     return (
       <>
         {[...Array(fullStars)].map((_, i) => (
-          <FaStar key={i} color="black" />
+          <FaStar key={i} color="black" className="text-sm md:text-base" />
         ))}
         {halfStar && <FaStarHalfAlt color="black" />}
         {[...Array(emptyStars)].map((_, i) => (
-          <FaRegStar key={i} color="black" />
+          <FaRegStar key={i} color="black" className="text-sm md:text-base" />
         ))}
       </>
     );
   };
 
   return (
-    <div className="flex items-center gap-x-1">
+    <div className="flex flex-wrap items-center gap-x-1">
       {renderStars()}
-      <span className="ml-1 text-sm">({ratings} ratings)</span>
+      <span className="ml-1 text-xs md:text-sm">({ratings} ratings)</span>
     </div>
   );
 }

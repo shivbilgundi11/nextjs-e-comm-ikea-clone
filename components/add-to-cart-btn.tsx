@@ -24,7 +24,7 @@ export default function AddToCartBtn({ prodData }: AddToCartProps) {
   return (
     <Button
       variant={"ghost"}
-      className="rounded-full bg-[#004F93] p-2 text-2xl font-bold text-white hover:bg-[#004F93] hover:text-white"
+      className="rounded-full bg-[#004F93] p-1 px-[10px] text-xl font-bold text-white hover:bg-[#004F93] hover:text-white md:p-2 md:text-2xl"
       onClick={handleAddToCart}
     >
       <TbShoppingBagPlus />

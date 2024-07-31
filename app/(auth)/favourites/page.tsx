@@ -14,7 +14,7 @@ export default function Favourites() {
           My favourites list
         </h2>
 
-        <section className="mt-6 grid h-full w-full grid-cols-1 items-center justify-center gap-3 md:mt-8 md:grid-cols-3 md:gap-5 lg:mt-10 lg:grid-cols-4 lg:gap-7">
+        <section className="mt-6 grid h-full w-full grid-cols-2 items-center justify-center gap-3 md:mt-8 md:grid-cols-3 md:gap-5 lg:mt-10 lg:grid-cols-4 lg:gap-7">
           {wishlists &&
             wishlists.map((prod) => {
               return (

@@ -41,13 +41,19 @@ const ProductCard = ({ cardData }: ProductCardProps) => {
           </Link>
           <div className="mt-1 flex flex-col gap-y-1">
             <Link href={`/p/${cardData?.id}`}>
-              <h3 className="text-sm font-bold">{cardData?.prodName}</h3>
+              <h3 className="text-sm font-bold lg:text-base">
+                {cardData?.prodName}
+              </h3>
             </Link>
-            <p className="text-sm text-gray-700">{cardData?.prodInfo}</p>
+            <p className="text-xs text-gray-700 md:text-sm">
+              {cardData?.prodInfo}
+            </p>
 
-            <p className="mt-1 text-sm font-bold">
+            <p className="mt-1 text-xs font-bold md:text-sm">
               Rs.
-              <big className="text-3xl">{formatPrice(cardData?.price)}</big>
+              <big className="text-xl md:text-3xl">
+                {formatPrice(cardData?.price)}
+              </big>
             </p>
             <p className="text-xs font-medium text-gray-700">
               Previous price Rs.{formatPrice(cardData?.prevPrice)}
@@ -62,10 +68,10 @@ const ProductCard = ({ cardData }: ProductCardProps) => {
           </div>
 
           <div className="flex flex-col gap-y-1">
-            <p className="inline-flex items-center gap-x-2">
+            <p className="inline-flex items-center gap-x-2 text-xs md:text-base">
               <GoDotFill color="green" /> In stock
             </p>
-            <p className="inline-flex items-center gap-x-2">
+            <p className="inline-flex items-center gap-x-2 text-xs md:text-base">
               <GoDotFill color="green" /> Available for delivery
             </p>
           </div>
