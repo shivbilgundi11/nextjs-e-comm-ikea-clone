@@ -54,12 +54,14 @@ export default function Navbar() {
                   </Button>
                 </Link> */}
 
-                <SignedOut>
-                  <SignInButton />
-                </SignedOut>
-                <SignedIn>
-                  <UserButton />
-                </SignedIn>
+                <div className="mr-2 flex items-center justify-center">
+                  <SignedOut>
+                    <SignInButton />
+                  </SignedOut>
+                  <SignedIn>
+                    <UserButton />
+                  </SignedIn>
+                </div>
 
                 <Link href={"/favourites"}>
                   <Button

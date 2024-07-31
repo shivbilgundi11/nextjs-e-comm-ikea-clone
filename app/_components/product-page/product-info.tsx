@@ -28,7 +28,7 @@ export default function ProductInfo({
           <div className="mt-1 flex flex-col gap-y-1">
             <div className="flex items-center justify-between gap-x-2">
               <h3 className="font-bold">{prodInfo?.prodName}</h3>
-              <AddToWishlist />
+              <AddToWishlist prodData={prodInfo} id={prodInfo?.id} />
             </div>
             <p className="text-gray-700 lg:w-[90%]">{prodInfo?.prodInfo}</p>
 

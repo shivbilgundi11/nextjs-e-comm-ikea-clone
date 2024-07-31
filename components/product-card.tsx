@@ -64,7 +64,7 @@ const ProductCard = ({ cardData }: ProductCardProps) => {
               id={cardData?.id}
               pInfo={cardData?.prodInfo}
             />
-            <AddToWishlist />
+            <AddToWishlist prodData={cardData} id={cardData?.id} />
           </div>
 
           <div className="flex flex-col gap-y-1">
