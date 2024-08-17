@@ -25,11 +25,12 @@ export default function ListingsByRoomType() {
       abortController.current = new AbortController();
       setError(false);
       try {
-        const res = await api.get(`/api/rooms/${params.roomId}`, {
+        const res = await api.get(`/api/rooms/${params?.roomId}`, {
           signal: abortController.current?.signal,
         });
         const data = await res.data;
         setFetchedData(data);
+        window.document.title = await `Room - ${params?.roomId} | Ikea`;
       } catch (error) {
         if (axios.isAxiosError(error)) {
           // Axios error

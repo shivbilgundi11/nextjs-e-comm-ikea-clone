@@ -25,6 +25,8 @@ export default function Cart() {
     } else {
       setIsCartEmpty(true);
     }
+
+    window.document.title = "Shopping bag | Ikea";
   }, [state]);
   return (
     <>

@@ -1,7 +1,7 @@
 "use client";
 
 import axios, { AxiosError } from "axios";
-import { useParams } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 import ProductsListing from "@/app/_components/category-page/products-listing";
@@ -9,7 +9,7 @@ import ErrorBox from "@/app/_components/error";
 import Loader from "@/app/_components/loading";
 import api from "@/app/api";
 
-export default function App() {
+export default function CategoryPage() {
   const [data, setData] = useState();
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -39,6 +39,8 @@ export default function App() {
   const abortController = useRef<AbortController | null>(null);
 
   useEffect(() => {
+    window.document.title = `Category - ${params.catId} | Ikea`;
+
     // setError(false);
     const fetchData = async () => {
       setLoading(true);
@@ -67,6 +69,8 @@ export default function App() {
           // Non-Axios error (e.g., network error)
           console.error("Network error:", error);
         }
+
+        notFound();
       } finally {
         setLoading(false);
       }

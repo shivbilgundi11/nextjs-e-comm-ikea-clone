@@ -1,11 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect } from "react";
 
 import ProductCard from "@/components/product-card";
 import { useAppSelector } from "@/lib/store/hooks";
 
 export default function Favourites() {
+  useEffect(() => {
+    window.document.title = "Favourites | Ikea";
+  }, []);
+
   const wishlists = useAppSelector((state) => state.wishlist.wishlists);
   return (
     <>

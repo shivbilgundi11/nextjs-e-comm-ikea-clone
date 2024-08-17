@@ -1,4 +1,9 @@
 import { SignUp } from "@clerk/nextjs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sign-Up - IKEA",
+};
 
 export default function Page() {
   return (
