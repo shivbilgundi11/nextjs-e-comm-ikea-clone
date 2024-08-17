@@ -17,8 +17,11 @@ export default function AddToCartBtn({ prodData }: AddToCartProps) {
   const dispatch = useAppDispatch();
 
   const handleAddToCart = () => {
-    dispatch(addToCart({ prodData, quantity: 1 }));
-    toast(`${prodData?.prodName} added to cart!`);
+    // Dispatch action to add product to cart
+    if (prodData) {
+      dispatch(addToCart({ prodData, quantity: 1 }));
+      toast(`${prodData?.prodName} added to cart!`);
+    }
   };
 
   return (

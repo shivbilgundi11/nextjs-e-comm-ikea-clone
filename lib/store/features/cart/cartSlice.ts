@@ -82,6 +82,11 @@ const cartSlice = createSlice({
       }
     },
 
+    // New action to set the cart items from localStorage
+    setCart: (state, action) => {
+      state.items = action.payload;
+    },
+
     // Clear/Empty Cart Items...
     clearCart: (state) => {
       state.items = [];
@@ -95,6 +100,7 @@ export const {
   removeFromCart,
   increaseProdQuantity,
   decreaseProdQuantity,
+  setCart,
   clearCart,
 } = cartSlice.actions;
 export default cartSlice.reducer;
