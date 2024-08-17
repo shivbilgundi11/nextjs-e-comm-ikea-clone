@@ -34,8 +34,13 @@ const wishlistSlice = createSlice({
         state.wishlists.push({ podData: itemInfo });
       }
     },
+
+    // New action to set the favourites items from localStorage
+    setFavs: (state, action) => {
+      state.wishlists = action.payload;
+    },
   },
 });
 
-export const { addToWishlist } = wishlistSlice.actions;
+export const { addToWishlist, setFavs } = wishlistSlice.actions;
 export default wishlistSlice.reducer;
