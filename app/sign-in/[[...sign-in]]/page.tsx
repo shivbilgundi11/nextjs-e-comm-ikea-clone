@@ -8,9 +8,10 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <div className="flex h-full min-h-screen w-full items-center justify-center">
+      <section className="grid min-h-screen w-full grid-cols-1 items-center justify-center gap-6 border-2 xl:grid-cols-2">
+        <div className="h-full w-full bg-[#0058A3]"></div>
         <SignIn />
-      </div>
+      </section>
     </>
   );
 }

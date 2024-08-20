@@ -1,14 +1,10 @@
 "use client";
 
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/clerk-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import Image from "next/image";
 import Link from "next/link";
 import Headroom from "react-headroom";
+import { AiOutlineUser } from "react-icons/ai";
 
 import CreditsAd from "@/app/_components/credits";
 import { MobileNav } from "@/app/_components/mobile-nav";
@@ -16,6 +12,7 @@ import { MobileNav } from "@/app/_components/mobile-nav";
 import CartBtn from "./cart-btn";
 import FavBtn from "./favourite-btn";
 import SearchBox from "./search-box";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   return (
@@ -43,7 +40,20 @@ export default function Navbar() {
               <div className="flex h-full w-max items-center gap-x-1">
                 <div className="mr-2 flex items-center justify-center">
                   <SignedOut>
-                    <SignInButton />
+                    <Link href={"/sign-in"}>
+                      <Button
+                        variant={"ghost"}
+                        className="rounded-full px-3 hover:bg-gray-200"
+                      >
+                        <span className="text-xl font-bold">
+                          <AiOutlineUser />
+                        </span>
+
+                        <span className="ml-1 hidden md:inline-block">
+                          Login
+                        </span>
+                      </Button>
+                    </Link>
                   </SignedOut>
                   <SignedIn>
                     <UserButton />
