@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <>
       <section className="grid min-h-screen w-full grid-cols-1 gap-6 border-2 xl:grid-cols-2">
-        <div className="flex h-full w-full flex-col items-start justify-between bg-[#0058A3] p-8 md:p-10 lg:p-14">
+        <div className="flex h-full w-full flex-col items-start justify-between gap-y-6 bg-[#0058A3] p-8 md:p-10 lg:p-14">
           {/* header */}
           <div className="flex items-center justify-start gap-x-2">
             <Link href={"/"}>
