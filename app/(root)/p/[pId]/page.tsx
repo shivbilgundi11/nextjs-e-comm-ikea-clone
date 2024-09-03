@@ -1,7 +1,7 @@
 "use client";
 
 import axios, { AxiosError } from "axios";
-import { notFound, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 import ErrorBox from "@/app/_components/error";
@@ -48,9 +48,6 @@ export default function ProductDetail() {
         } else {
           // Non-Axios error (e.g., network error)
           console.error("Network error:", error);
-        }
-        if (error) {
-          notFound();
         }
       } finally {
         setLoading(false);

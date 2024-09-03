@@ -1,7 +1,7 @@
 "use client";
 
 import axios, { AxiosError } from "axios";
-import { notFound, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 import ProductsListing from "@/app/_components/category-page/products-listing";
@@ -69,8 +69,6 @@ export default function CategoryPage() {
           // Non-Axios error (e.g., network error)
           console.error("Network error:", error);
         }
-
-        notFound();
       } finally {
         setLoading(false);
       }

@@ -9,6 +9,7 @@ import { EmptyBagItems } from "@/components/clear-cart";
 import { Button } from "@/components/ui/button";
 import { useAppSelector } from "@/lib/store/hooks";
 import { formatPrice } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Cart() {
   const [isCartEmpty, setIsCartEmpty] = useState(true);
@@ -64,10 +65,14 @@ export default function Cart() {
                 here.
               </p>
               <div className="mt-4 flex items-center gap-x-3 md:mt-6">
-                <Button className="rounded-full">Login</Button>
-                <Button className="rounded-full" variant={"outline"}>
-                  View your wishlist
-                </Button>
+                <Link href={"/sign-in"}>
+                  <Button className="rounded-full">Login</Button>
+                </Link>
+                <Link href={"/favourites"}>
+                  <Button className="rounded-full" variant={"outline"}>
+                    View your wishlist
+                  </Button>
+                </Link>
               </div>
             </>
           )}
