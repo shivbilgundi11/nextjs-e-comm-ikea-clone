@@ -390,8 +390,8 @@ The elegant, fixed cover has a perfect fit that will last over time. You can cho
   },
   {
     id: "furnit1-v2",
-    img1: "/listings/furniture/listing-furnit1.avif",
-    img2: "/listings/furniture/listing-h-furnit1.avif",
+    img1: "/products/furniture/furnit1-p1-v2.avif",
+    img2: "/products/furniture/furnit1-p2-v2.webp",
     prodName: "EKENÄSET",
     prodInfo: "2-seat sofa, Kilanda light beige",
     price: 24990,

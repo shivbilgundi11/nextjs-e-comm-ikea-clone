@@ -60,6 +60,12 @@ export const footerLinks = [
 // Categorys links...
 export const categories = [
   {
+    id: "1alld-ff",
+    imageURL: "/category/all.png",
+    category: "Browse Products",
+    path: "/browse-all",
+  },
+  {
     id: "cat-1a2b3c",
     imageURL: "/category/newLowerPrice.png",
     category: "New lower price",
